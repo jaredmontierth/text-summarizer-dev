@@ -1,0 +1,245 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  header {
+    padding: 20px;
+  }
+  
+  header h1 {
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  #url-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  #url-input:focus {
+    outline: none;
+  }
+  
+  #summarize-button {
+    padding: 12px 24px;
+    background-color: #364866;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.light-mode #summarize-button:hover {
+    background-color: #008118;
+}
+
+.dark-mode #summarize-button:hover {
+    background-color: #008118;
+}
+  
+  
+  .output-section {
+    text-align: left;
+  }
+  
+  #summarized-text {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  
+  #summarize-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  .language-select {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+
+  .loading-dots::before {
+    content: '';
+    animation: loading-dots 1s steps(5, end) infinite;
+  }
+  
+  @keyframes loading-dots {
+    0% {
+      content: '';
+    }
+    20% {
+      content: '.';
+    }
+    40% {
+      content: '..';
+    }
+    60% {
+      content: '...';
+    }
+    100% {
+      content: '';
+    }
+  }
+  
+  /* Light mode */
+  .light-mode {
+    background-color: #f5f5f5;
+  }
+  
+  .light-mode header {
+    background-color: #364866;
+  }
+  
+  .light-mode header h1 {
+    color: #fff;
+  }
+  
+  .light-mode main {
+    background-color: #fff;
+  }
+  
+  .light-mode #url-input {
+    border: 1px solid #ccc;
+  }
+  
+  .light-mode #url-input:focus {
+    border-color: #364866;
+  }
+  
+  .light-mode #summarize-button {
+    background-color: #364866;
+  }
+  
+  .light-mode #summarized-text {
+    color: #333;
+  }
+
+  .light-mode .footer p {
+    clear: left;
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    color: #979797; 
+    padding-bottom: 10px;
+  }
+  
+  .light-mode .language-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-align-last: center;
+    cursor: pointer;
+    background-color: #364866;
+    color: #fff; 
+    padding-bottom: 3px;
+    /* border: 1px solid #364866; */
+  }
+  
+  /* Dark mode */
+  .dark-mode {
+    background-color: #0d1116;
+  }
+  
+  .dark-mode header {
+    background-color: #364866;
+  }
+  
+  .dark-mode header h1 {
+    color: #fff;
+  }
+  
+  .dark-mode main {
+    background-color: #161b22;
+  }
+  
+  .dark-mode #url-input {
+    background-color: #000;
+    color: #ccc; 
+    border: 1px solid #000000;
+  }
+
+.dark-mode #url-input:focus {
+  border-color: #000000;
+}
+
+.dark-mode #summarize-button {
+  background-color: #000;
+}
+
+.dark-mode #summarized-text {
+  color: #ccc;
+}
+
+.dark-mode h2, p {
+  color: #ccc;
+}
+
+.dark-mode .language-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-align-last: center;
+    cursor: pointer;
+    background-color: #2e313e;
+    color: #fff; 
+    border: 1px solid #555;
+    padding-bottom: 3px;
+
+  }
+  
+  .dark-mode .footer p {
+    clear: left;
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    color: #5b5b5b; 
+    padding-bottom: 10px;
+  }
